@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MVVMEmilioGuerrero.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MVVMEmilioGuerrero"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MVVMEmilioGuerrero">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:CambioDivisas}"
+        Route="MainPage" />
+
+</Shell>
