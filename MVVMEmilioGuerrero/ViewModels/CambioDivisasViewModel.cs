@@ -6,13 +6,13 @@ namespace MVVMEmilioGuerrero.ViewModels
 {
     public class CambioDivisasViewModel : INotifyPropertyChanged
     {
-        private double _valorDolares;
-        private double _valorEuros;
+        private string _valorDolares;
+        private string _valorEuros;
 
-        public double ValorDolares
+        public string ValorDolares
         {
             get => _valorDolares;
-            private set
+            set 
             {
                 if (_valorDolares != value)
                 {
@@ -24,10 +24,10 @@ namespace MVVMEmilioGuerrero.ViewModels
             }
         }
         
-        public double ValorEuros
+        public string ValorEuros
         {
             get => _valorEuros;
-            private set
+            set
             {
                 if ( _valorEuros != value)
                 {
@@ -41,12 +41,12 @@ namespace MVVMEmilioGuerrero.ViewModels
 
         public void ConvertirDolaresEuros()
         {
-            ValorEuros = ValorDolares * 0.95;
+            double conversion = double.Parse(_valorDolares) * 0.95;
         }
 
         public void ConvertirEurosDolares()
         {
-            ValorDolares = ValorEuros * 1.05;
+            double conversion = double.Parse(_valorDolares) * 1.05;
 
         }
 
